@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - name: go
-        image: yuswift/devops-go-sample
+        image: $REGISTRY/$DOCKERHUB_USERNAME/$APP_NAME
