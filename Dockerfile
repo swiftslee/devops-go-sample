@@ -9,8 +9,6 @@ COPY cmd/ cmd/
 RUN go mod download
 
 # Build
-RUN ls
-
 RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go build -a -o devops-go-sample cmd/main.go
 
 # Use distroless as minimal base image to package the manager binary
