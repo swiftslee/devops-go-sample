@@ -1,7 +1,7 @@
 apiVersion: types.kubefed.io/v1beta1
 kind: FederatedDeployment
 metadata:
-  namespace: default
+  namespace: $MULTI_CLUSTER_PROJECT_NAME
   name: multi-cluster-devops-go-sample
   labels:
     app: multi-cluster-devops-go-sample
@@ -12,7 +12,6 @@ spec:
       - name: c9
   template:
     metadata:
-      namespace: $MULTI_CLUSTER_PROJECT_NAME
       labels:
         app: multi-cluster-devops-go-sample
       annotations:
